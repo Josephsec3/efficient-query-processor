@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, q; cin >> n >> q;
+    unordered_map<int, int> check;
+
+    for (int i = 0; i < q; i++) {
+        int e, x;
+        cin >> e >> x;
+        if (e==1) check[x]++;
+        else if (e==2) check[x] +=2;
+        else if (e==3) cout << (check[x] >=2? "Yes":"No") << "\n";
+    }
+
+    return 0;
+}
